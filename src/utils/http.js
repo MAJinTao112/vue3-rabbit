@@ -12,4 +12,10 @@ httpInstance.interceptors.request.use(config=>{
   return Promise.reject(e)
 }
 
+httpInstance.interceptors.response.use(res=>{
+  return res.data
+},e=>{
+  return Promise.reject(e)
+})
+
 export default httpInstance;
